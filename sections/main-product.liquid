@@ -71,14 +71,6 @@
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-
-        
-		{%- if product.metafields.shopify-app-poc.nftId -%}
-        <p class="line-item-property__field">
-          <label for="wallet">wallet</label>
-          <input required class="required" id="wallet" type="text" name="properties[wallet]" form="{{ product_form_id }}">
-		</p>
-        {%- endif -%}
         
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -320,7 +312,16 @@
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-                {%- endform -%}
+
+                  {%- if product.metafields.shopify-app-poc.nftId -%}
+                  <p class="line-item-property__field">
+                    <label for="wallet">wallet</label>
+                    <input required class="required" id="wallet" type="text" name="properties[wallet]" form="{{ product_form_id }}">
+                  </p>
+                  {%- endif -%}
+                  
+                  
+                  {%- endform -%}
               </product-form>
 
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
