@@ -63,6 +63,7 @@
         "title",
         "subtitle",
         "price",
+        "wallet",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
