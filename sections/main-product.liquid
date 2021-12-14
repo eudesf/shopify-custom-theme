@@ -72,9 +72,12 @@
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+        
 		{%- if product.metafields.shopify-app-poc.nftId -%}
-                <input type="text" value="" name="properties[wallet]" required class="required"
-                    form="{{ product_form_id }}" />
+        <p class="line-item-property__field">
+          <label for="wallet">wallet</label>
+          <input required class="required" id="wallet" type="text" name="properties[wallet]" form="{{ product_form_id }}">
+		</p>
         {%- endif -%}
         
         {%- for block in section.blocks -%}
