@@ -73,7 +73,7 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
 		{%- if product.metafields.shopify-app-poc.nftId -%}
-                <input type="text" value="" name="properties[wallet]"
+                <input type="text" value="" name="properties[wallet]" required
                     form="{{ product_form_id }}" />
         {%- endif -%}
         
