@@ -287,6 +287,15 @@
                 </div>
 
                 {%- form 'product', product, id: product_form_id, class: 'form', data-type: 'add-to-cart-form' -%}
+
+                  {%- if product.metafields.shopify-app-poc.nftId -%}
+                  <p class="line-item-property__field">
+                    <label for="wallet">wallet</label>
+                    <input required class="required" id="wallet" type="text" name="properties[wallet]" form="{{ product_form_id }}">
+                  </p>
+                  {%- endif -%}
+
+                  
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <div class="product-form__buttons">
                     <button
@@ -312,14 +321,6 @@
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-
-                  {%- if product.metafields.shopify-app-poc.nftId -%}
-                  <p class="line-item-property__field">
-                    <label for="wallet">wallet</label>
-                    <input required class="required" id="wallet" type="text" name="properties[wallet]" form="{{ product_form_id }}">
-                  </p>
-                  {%- endif -%}
-                  
                   
                   {%- endform -%}
               </product-form>
