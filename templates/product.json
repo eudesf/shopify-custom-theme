@@ -48,6 +48,8 @@
         "f25aec66-2ff9-4074-b0c0-ca0ba042fb9e": {
           "type": "shopify:\/\/apps\/admin-panel-app\/blocks\/star_rating\/c6b94d18-ae20-4106-972c-b6cb414c6797",
           "settings": {
+            "product": "aaaa",
+            "colour": "#ff0000"
           }
         },
         "buy_buttons": {
