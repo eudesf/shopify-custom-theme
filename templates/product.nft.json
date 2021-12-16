@@ -27,6 +27,11 @@
           "settings": {
           }
         },
+        "66247c7f-e44c-42ab-9cb0-701eda06d9b1": {
+          "type": "shopify:\/\/apps\/admin-panel-app\/blocks\/wallet\/c6b94d18-ae20-4106-972c-b6cb414c6797",
+          "settings": {
+          }
+        },
         "wallet": {
           "type": "text",
           "settings": {
@@ -75,6 +80,7 @@
         "title",
         "subtitle",
         "price",
+        "66247c7f-e44c-42ab-9cb0-701eda06d9b1",
         "wallet",
         "variant_picker",
         "quantity_selector",
