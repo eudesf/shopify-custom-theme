@@ -3,6 +3,7 @@
     "main": {
       "type": "main-product-test",
       "settings": {
+        "line1": "My Test Line"
       }
     }
   },
