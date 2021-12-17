@@ -1,5 +1,7 @@
 <h1 style="color: blue">collection.handle: {{ collection.handle }}</h1>
-
-{% section "main-collection-banner" %}
-
-{% section "main-collection-product-grid" %}
+{% if collection.handle == 'all' %}
+	<script>window.location.replace("/");</script>
+{% else %}
+  {% section "main-collection-banner" %}
+  {% section "main-collection-product-grid" %}
+{% endif %}
